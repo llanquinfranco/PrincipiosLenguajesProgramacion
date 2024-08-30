@@ -1,0 +1,43 @@
+?- point(A,B) = point(1,s(2)).
+A = 1,   
+B = s(2).
+
+?- pre(A,B) = pre(X,Y,Z).
+false.
+
+?- 6 = 3+3.
+false.
+
+?- esquina(X+Y) = esquina(corrientes+cordoba).
+X = corrientes,
+Y = cordoba.
+
+?- Diana = diana.
+Diana = diana.
+
+?- ‘Diana’ = _diana.
+ERROR: Syntax error: Operator expected
+ERROR:
+ERROR: ** here **
+ERROR: ‘Diana’ = _diana .
+
+?- X+1-Y*2 = (X+1)-(Y*2).
+true.
+
+?- long(X, punto(A,2)) = long(Y, punto(2+1, ))).
+ERROR: Syntax error: Illegal start of term
+ERROR: long(X, punto(A,2)) = long(Y, punto(2+1,
+ERROR: ** here **
+ERROR:  ))) .
+
+?- plus(2,2) = 4.
+false.
+
+?- admira(X,padre(X)) = admira(padre(U),V).
+X = padre(U),
+V = padre(padre(U)).
+
+?- p(q(-1,0),P2,P3) = p(P1, q(1,0),q(0,Y)).
+P2 = q(1, 0),
+P3 = q(0, Y),
+P1 = q(-1, 0).

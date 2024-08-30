@@ -1,0 +1,184 @@
+d)
+?- madre(X,laura).
+X = andrea.
+
+abuelo(tomas,Y).
+Y = pablo ;
+Y = luciano ;
+Y = ariel.
+
+?- ancestro(X,luciano).
+X = pedro ;
+X = laura ;
+X = jorge ;
+X = tomas ;
+X = daniel ;
+X = andrea ;
+X = norma ;
+X = carlos ;
+X = silvia ;
+false.
+
+?- ancestro(jorge,Y).
+Y = carlos ;
+Y = andrea ;
+Y = cecilia ;
+Y = laura ;
+Y = luciano ;
+Y = ariel ;
+Y = gabriel ;
+false.
+
+?- soltero(luis).
+true ;
+true.
+
+?- soltero(jose).
+true ;
+true.
+
+?- amante(X,Y).
+X = jorge,
+Y = silvia ;
+X = pedro,
+Y = maria ;
+X = maria,
+Y = pedro ;
+X = silvia,
+Y = jorge ;
+false.
+
+------------------------------------------------------------------------------
+e)
+¿es Pablo hermano de Luis?
+?- hermano(pablo, luis). 
+true.
+
+Pedro, ¿de quién es padre?
+?- progenitor(pedro, H).
+H = pablo ;
+H = luciano ;
+H = ariel.
+
+¿Quién es suegro de María?
+?- suegro(S, maria).
+S = jose ;
+false.
+
+¿Quiénes son hermanos?
+?- hermano(X, Y).
+X = ana,
+Y = luis ;
+X = ana,
+Y = pablo ;
+X = ana,
+Y = luis ;
+X = pablo,
+Y = luciano ;
+X = pablo,
+Y = ariel ;
+X = pablo,
+Y = ana ;
+X = pablo,
+Y = luis ;
+X = luis,
+Y = ana ;
+X = luis,
+Y = ana ;
+X = luis,
+Y = pablo ;
+X = luciano,
+Y = pablo ;
+X = luciano,
+Y = ariel ;
+X = luciano,
+Y = ariel ;
+X = ariel,
+Y = luciano ;
+X = ariel,
+Y = pablo ;
+X = ariel,
+Y = luciano ;
+X = maria,
+Y = rodolfo ;
+X = maria,
+Y = sandra ;
+X = maria,
+Y = rodolfo ;
+X = maria,
+Y = sandra ;
+X = rodolfo,
+Y = maria ;
+X = rodolfo,
+Y = sandra ;
+X = rodolfo,
+Y = maria ;
+X = rodolfo,
+Y = sandra ;
+X = sandra,
+Y = maria ;
+X = sandra,
+Y = rodolfo ;
+X = sandra,
+Y = maria ;
+X = sandra,
+Y = rodolfo ;
+X = andrea,
+Y = cecilia ;
+X = andrea,
+Y = cecilia ;
+X = cecilia,
+Y = andrea ;
+X = cecilia,
+Y = andrea ;
+false.
+
+¿De quién es primo Damián?
+?- primo(damian, P).
+P = ana ;
+P = pablo ;
+P = luis ;
+P = ana ;
+P = pablo ;
+P = luis ;
+false.
+
+¿Quiénes son tíos de Pablo?
+?- tio(T, pablo).
+T = rodolfo ;
+T = rodolfo ;
+T = sandra ;
+T = sandra ;
+false.
+
+¿De quién es Luciano bisnieto?
+?- bisabuelo(B, luciano).
+B = norma ;
+B = carlos ;
+false.
+
+¿Quiénes son descendientes de Silvia?
+?- ancestro(silvia, D).
+D = carlos ;
+D = andrea ;
+D = cecilia ;
+D = laura ;
+D = luciano ;
+D = ariel ;
+D = gabriel ;
+false.
+
+¿Quiénes son solteros?
+?- soltero(X).
+X = ariel ;
+X = luciano ;
+X = luis ;
+X = pablo ;
+X = tomas ;
+X = jose ;
+X = jorge ;
+X = gabriel ;
+X = damian ;
+X = ana ;
+X = sandra ;
+X = silvia.
